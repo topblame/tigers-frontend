@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#f5f7fc" />
+  <text x="40" y="80" font-family="Arial, sans-serif" font-size="28" fill="#003366">AI 뉴스 분석 UI 참고</text>
+  <text x="40" y="120" font-family="Arial, sans-serif" font-size="18" fill="#003366">(사용자 제공 스크린샷 자리표시)</text>
+  <rect x="40" y="160" width="720" height="800" rx="12" fill="#ffffff" stroke="#d0d5dd" stroke-width="2" />
+  <text x="60" y="210" font-family="Arial, sans-serif" font-size="20" fill="#101828">샘플 화면을 여기에 삽입하세요.</text>
+</svg>
