@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { NewsAnalyzer } from "@/features/news/components/NewsAnalyzer";
 
 export default function Home() {
@@ -20,10 +18,6 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <p className="mt-4 text-sm text-muted-foreground">
-            계정 관리와 Google 로그인 테스트는 <Link className="font-semibold text-primary" href="/account">계정 페이지</Link>
-            에서 진행할 수 있습니다.
-          </p>
         </section>
         <NewsAnalyzer />
       </main>
