@@ -24,6 +24,7 @@ async function handleResponse<T>(response: Response): Promise<T> {
 }
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
+<<<<<<< HEAD
   let response: Response;
 
   try {
@@ -42,6 +43,16 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
       `API 서버(${base})에 연결할 수 없습니다. 백엔드가 실행 중인지, CORS/프록시 설정이 맞는지 확인해주세요.`,
     );
   }
+=======
+  const response = await fetch(`${API_BASE_URL}${path}`, {
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+      ...(init?.headers ?? {}),
+    },
+    ...init,
+  });
+>>>>>>> main
 
   return handleResponse<T>(response);
 }

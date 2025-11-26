@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import Link from "next/link";
 
+=======
+import { AccountPanel } from "@/features/auth/components/AccountPanel";
+>>>>>>> main
 import { NewsAnalyzer } from "@/features/news/components/NewsAnalyzer";
 
 export default function Home() {
@@ -18,6 +22,9 @@ export default function Home() {
               <h1 className="text-2xl font-semibold text-foreground">
                 AI 뉴스 분석
               </h1>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Google OAuth로 로그인하면 세션 기반으로 프로필을 불러오고 닉네임을 관리할 수 있습니다.
+              </p>
             </div>
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
@@ -25,7 +32,10 @@ export default function Home() {
             에서 진행할 수 있습니다.
           </p>
         </section>
-        <NewsAnalyzer />
+        <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
+          <NewsAnalyzer />
+          <AccountPanel />
+        </div>
       </main>
     </div>
   );

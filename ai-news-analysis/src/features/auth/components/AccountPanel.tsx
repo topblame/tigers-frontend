@@ -74,6 +74,7 @@ export function AccountPanel() {
 
     if (status === "error") {
       return (
+<<<<<<< HEAD
         <div className="space-y-3 rounded-2xl bg-destructive/5 px-4 py-3 text-sm text-destructive">
           <p className="font-semibold">{error ?? "인증 정보를 불러오지 못했습니다."}</p>
           <ul className="list-disc space-y-1 pl-5 text-destructive/80">
@@ -99,6 +100,17 @@ export function AccountPanel() {
               Google 로그인 페이지 열기
             </a>
           </div>
+=======
+        <div className="space-y-3 rounded-2xl bg-destructive/10 px-4 py-3 text-sm text-destructive">
+          <p>{error ?? "인증 정보를 불러오지 못했습니다."}</p>
+          <button
+            type="button"
+            onClick={() => refresh()}
+            className="rounded-xl border border-destructive/30 px-3 py-2 text-xs font-semibold text-destructive hover:bg-destructive/10"
+          >
+            다시 시도하기
+          </button>
+>>>>>>> main
         </div>
       );
     }
