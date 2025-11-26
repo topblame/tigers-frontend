@@ -1,6 +1,6 @@
 import type { AccountProfile, AuthStatusResponse } from "../types";
 
-const API_BASE_URL = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000").replace(/\/$/, "");
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:33333").replace(/\/$/, "");
 
 async function handleResponse<T>(response: Response): Promise<T> {
   if (!response.ok) {
