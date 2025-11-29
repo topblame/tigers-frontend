@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Link from "next/link";
+
+=======
 import { AccountPanel } from "@/features/auth/components/AccountPanel";
+>>>>>>> main
+=======
+>>>>>>> 7fd400c1401f219da3b02064f1d75fef2f5e33a3
 import { NewsAnalyzer } from "@/features/news/components/NewsAnalyzer";
 
 export default function Home() {

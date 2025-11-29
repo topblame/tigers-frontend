@@ -24,6 +24,26 @@ async function handleResponse<T>(response: Response): Promise<T> {
 }
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
+<<<<<<< HEAD
+  let response: Response;
+
+  try {
+    response = await fetch(`${API_BASE_URL}${path}`, {
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        ...(init?.headers ?? {}),
+      },
+      ...init,
+    });
+  } catch (err) {
+    console.error("[authApi] network error", err);
+    const base = API_BASE_URL || "(현재 페이지)";
+    throw new Error(
+      `API 서버(${base})에 연결할 수 없습니다. 백엔드가 실행 중인지, CORS/프록시 설정이 맞는지 확인해주세요.`,
+    );
+  }
+=======
   const response = await fetch(`${API_BASE_URL}${path}`, {
     credentials: "include",
     headers: {
@@ -32,6 +52,7 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     },
     ...init,
   });
+>>>>>>> main
 
   return handleResponse<T>(response);
 }

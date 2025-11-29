@@ -74,6 +74,33 @@ export function AccountPanel() {
 
     if (status === "error") {
       return (
+<<<<<<< HEAD
+        <div className="space-y-3 rounded-2xl bg-destructive/5 px-4 py-3 text-sm text-destructive">
+          <p className="font-semibold">{error ?? "인증 정보를 불러오지 못했습니다."}</p>
+          <ul className="list-disc space-y-1 pl-5 text-destructive/80">
+            <li>FastAPI 백엔드가 실행 중인지, 올바른 포트(예: 8000)인지 확인하세요.</li>
+            <li>
+              프론트엔드에서 접근할 수 있도록 <code className="rounded bg-destructive/10 px-1">NEXT_PUBLIC_API_BASE_URL</code>
+              환경 변수를 백엔드 주소(프로토콜 포함)로 설정한 후 다시 빌드/실행하세요.
+            </li>
+            <li>브라우저에서 쿠키 차단, CORS/프록시 설정 문제 여부를 확인하세요.</li>
+          </ul>
+          <div className="flex flex-wrap gap-2 text-xs">
+            <button
+              type="button"
+              onClick={() => refresh()}
+              className="rounded-xl border border-destructive/30 px-3 py-2 font-semibold text-destructive hover:bg-destructive/10"
+            >
+              다시 시도하기
+            </button>
+            <a
+              href={loginUrl}
+              className="inline-flex items-center justify-center rounded-xl border border-border px-3 py-2 font-semibold text-destructive hover:bg-destructive/10"
+            >
+              Google 로그인 페이지 열기
+            </a>
+          </div>
+=======
         <div className="space-y-3 rounded-2xl bg-destructive/10 px-4 py-3 text-sm text-destructive">
           <p>{error ?? "인증 정보를 불러오지 못했습니다."}</p>
           <button
@@ -83,6 +110,7 @@ export function AccountPanel() {
           >
             다시 시도하기
           </button>
+>>>>>>> main
         </div>
       );
     }
